@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AlTech Solutions | Simple & Clean Web App</title>
+    
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo" onclick="navigateTo('home')" style="cursor: pointer;">
+                Al<span>Tech</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <nav id="nav-menu">
+                <button onclick="navigateTo('home')" id="nav-home" class="nav-btn active">Home</button>
+                <button onclick="navigateTo('about')" id="nav-about" class="nav-btn">About</button>
+                <button onclick="navigateTo('services')" id="nav-services" class="nav-btn">Services</button>
+                <button onclick="navigateTo('gallery')" id="nav-gallery" class="nav-btn">Gallery</button>
+                <button onclick="navigateTo('signup')" id="nav-signup" class="nav-btn">Sign Up</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 1. HOME PAGE -->
+        <section id="page-home" class="page-section active">
+            <div class="hero">
+                <h1>Simple & Reliable Cloud Architecture</h1>
+                <p>We craft modern software solutions for growing businesses. Clean, fast, and engineered for high stability.</p>
+                <div class="hero-buttons">
+                    <button onclick="navigateTo('signup')" class="btn">Get Started</button>
+                    <button onclick="navigateTo('services')" class="btn btn-outline">Explore Offerings</button>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Fast Deployment</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Launch your applications instantly with optimized continuous delivery pipelines.</p>
+                </div>
+                <div class="card">
+                    <h3>High Security</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Enterprise encryption standards keeping your business and client data fully protected.</p>
+                </div>
+                <div class="card">
+                    <h3>24/7 Monitoring</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Continuous platform health updates ensuring peak runtime performance without downtime.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT PAGE -->
+        <section id="page-about" class="page-section">
+            <div class="page-banner">
+                <h1>About Our Company</h1>
+                <p>Learn more about our core mission and dedicated development team.</p>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 2.5rem;">
+                <div class="card">
+                    <h2>Our Mission</h2>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">To simplify technical infrastructure for startups and modern businesses through streamlined tools, high accessibility, and robust software craftsmanship.</p>
+                </div>
+                <div class="card">
+                    <h2>Our Core Values</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <strong>Simplicity:</strong> Clean code and simple user experience.
+                        </div>
+                        <div class="timeline-item">
+                            <strong>Integrity:</strong> Transparent communication and reliable delivery.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Key Leadership Team</h2>
+            <div class="grid-3" style="margin-top: 1rem;">
+                <div class="card" style="text-align: center;">
+                    <div class="team-avatar">DM</div>
+                    <h3>David Miller</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Founder & Lead Architect</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="team-avatar">ER</div>
+                    <h3>Elena Rostova</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Chief Technology Officer</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="team-avatar">JL</div>
+                    <h3>James Lawson</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Head of Product Design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SERVICES PAGE -->
+        <section id="page-services" class="page-section">
+            <div class="page-banner">
+                <h1>Products & Services</h1>
+                <p>Transparent tiers tailored to fit your project requirements.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Starter Tier</h3>
+                    <div class="price">$29 <span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/mo</span></div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Essential tools for personal projects.</p>
+                    <ul class="price-list">
+                        <li>5 Projects Included</li>
+                        <li>10 GB Storage Space</li>
+                        <li>Community Support</li>
+                    </ul>
+                    <button onclick="navigateTo('signup')" class="btn btn-outline" style="width: 100%;">Select Tier</button>
+                </div>
+
+                <div class="card" style="border-color: var(--primary-color);">
+                    <h3>Business Pro</h3>
+                    <div class="price">$99 <span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/mo</span></div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Complete package for active workflows.</p>
+                    <ul class="price-list">
+                        <li>Unlimited Projects</li>
+                        <li>500 GB Storage Space</li>
+                        <li>Priority Email Support</li>
+                    </ul>
+                    <button onclick="navigateTo('signup')" class="btn" style="width: 100%;">Start Free Trial</button>
+                </div>
+
+                <div class="card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$299 <span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/mo</span></div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Custom infrastructure and dedicated management.</p>
+                    <ul class="price-list">
+                        <li>Dedicated Server Setup</li>
+                        <li>Unlimited Team Seats</li>
+                        <li>24/7 Phone Support</li>
+                    </ul>
+                    <button onclick="navigateTo('signup')" class="btn btn-outline" style="width: 100%;">Contact Sales</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GALLERY PAGE -->
+        <section id="page-gallery" class="page-section">
+            <div class="page-banner">
+                <h1>Portfolio Showcase</h1>
+                <p>A look into recent project deliveries and interface designs.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card gallery-card">
+                    <img src="https://placehold.co/600x400/2563eb/ffffff?text=Fintech+Engine" alt="Project 1" class="gallery-img">
+                    <h3>Fintech Analytics Engine</h3>
+                    <p>Real-time data visualization dashboard for market monitoring.</p>
+                </div>
+
+                <div class="card gallery-card">
+                    <img src="https://placehold.co/600x400/0f172a/ffffff?text=Health+App" alt="Project 2" class="gallery-img">
+                    <h3>Health Tracker Mobile App</h3>
+                    <p>Cross-platform application built for fitness logging.</p>
+                </div>
+
+                <div class="card gallery-card">
+                    <img src="https://placehold.co/600x400/64748b/ffffff?text=E-Commerce" alt="Project 3" class="gallery-img">
+                    <h3>Store Platform Design</h3>
+                    <p>Modern shopping UI overhaul optimized for conversions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SIGN UP PAGE -->
+        <section id="page-signup" class="page-section">
+            <div class="page-banner">
+                <h1>Create an Account</h1>
+                <p>Fill in your details to get started on the platform.</p>
+            </div>
+
+            <div class="form-container">
+                <div id="alert-box" class="alert-success">
+                    Registration complete! Welcome to ApexTech.
+                </div>
+
+                <form id="registration-form" onsubmit="handleRegister(event)" class="card">
+                    <!-- 1. Text Input -->
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" class="form-control" placeholder="Al Amin" required>
+                    </div>
+
+                    <!-- 2. Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-control" placeholder="al@example.com" required>
+                    </div>
+
+                    <!-- 3. Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="grid-2">
+                        <!-- 4. Telephone Input -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+88 000-00000000">
+                        </div>
+
+                        <!-- 5. Date Input -->
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <!-- 6. Number Input -->
+                        <div class="form-group">
+                            <label for="experience">Years of Experience</label>
+                            <input type="number" id="experience" class="form-control" min="0" max="50" value="2">
+                        </div>
+
+                        <!-- 7. URL Input -->
+                        <div class="form-group">
+                            <label for="portfolio">Portfolio Website</label>
+                            <input type="url" id="portfolio" class="form-control" placeholder="https://yourwebsite.com">
+                        </div>
+                    </div>
+
+                    <!-- 8. Select Input -->
+                    <div class="form-group">
+                        <label for="role">Primary Role *</label>
+                        <select id="role" class="form-control" required>
+                            <option value="">Select an option...</option>
+                            <option value="developer">Software Engineer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Product Manager</option>
+                        </select>
+                    </div>
+
+                    <!-- 9. Radio Buttons -->
+                    <div class="form-group">
+                        <label>Account Type</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="account_type" value="individual" checked> Individual</label>
+                            <label><input type="radio" name="account_type" value="team"> Team / Organization</label>
+                        </div>
+                    </div>
+
+                    <!-- 10. File Input -->
+                    <div class="form-group">
+                        <label for="photo">Upload Profile Photo</label>
+                        <input type="file" id="photo" class="form-control" accept="image/*">
+                    </div>
+
+                    <!-- 11. Textarea -->
+                    <div class="form-group">
+                        <label for="bio">Short Bio</label>
+                        <textarea id="bio" rows="3" class="form-control" placeholder="Tell us briefly about your projects..."></textarea>
+                    </div>
+
+                    <!-- 12. Checkbox -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" required> I accept the Terms & Conditions *</label>
+                        </div>
+                    </div>
+
+                    <!-- 13 & 14. Submit & Reset Buttons -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn" style="flex: 1;">Complete Registration</button>
+                        <button type="reset" class="btn btn-outline">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ApexTech Solutions Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Single Page Navigation Logic -->
+    <script>
+        function navigateTo(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Show selected page
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Highlight Active Nav Button
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => btn.classList.remove('active'));
+
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
+
+            // Close Mobile Menu if active
+            document.getElementById('nav-menu').classList.remove('show');
+
+            // Scroll to Top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('alert-box');
+            alertBox.style.display = 'block';
+            
+            // Scroll to message
+            alertBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
